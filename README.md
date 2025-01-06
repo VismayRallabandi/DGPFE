@@ -1,5 +1,20 @@
-## Next.js App Router Course - Starter
+## Description
+Digital Gatepass Front End
+To implement a standard and sustainable digitized process across all sites in order to secure assets and ensure that they are accounted for. 
 
-This is the starter template for the Next.js App Router Course. It contains the starting code for the dashboard application.
+https://www.notion.so/weworkindia/TRD-Digitized-GatePasses-1724cf1ccc8480ed8171d632511965db
 
-For more information, see the [course curriculum](https://nextjs.org/learn) on the Next.js Website.
+
+[Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
+
+## Installation
+
+```bash
+$ bun install
+```
+
+## Running the app
+
+```bash
+# development
+$  bun run build
