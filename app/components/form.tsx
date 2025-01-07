@@ -16,7 +16,7 @@ interface FormData {
   }>;
   otherAddress: string;
   returnable: boolean;
-
+  invoiceNumber: string| null;
   dateofReturn: string | null;
   requesterName: string;
 
@@ -35,7 +35,7 @@ const Form = () => {
     returnable: false,
     dateofReturn: null,
     requesterName: email || "",
-
+    invoiceNumber: null,
   });
 
 
@@ -69,7 +69,7 @@ const Form = () => {
 
     fetchOptions();
   }, []);
-
+  
   // Handle individual items in the items array
   const handleItems = (index: number) => {
     const newItems = [...formData.items];
@@ -143,7 +143,7 @@ const Form = () => {
         items: formData.items,
         otherAddress: formData.otherAddress,
         returnable: formData.returnable,
-
+        invoiceNumber: formData.invoiceNumber,
         dateofReturn: formData.returnable ? formData.dateofReturn : null, // Send null if not returnable
         requesterName: formData.requesterName,
  
@@ -217,7 +217,20 @@ const Form = () => {
         </div>
       </div>
 
-
+      {/* Invoice Number */}
+      <div>
+        <label htmlFor="invoiceNumber" className="block text-sm font-medium text-gray-600 mb-2">
+          Invoice Number (if applicable):
+        </label>
+        <input
+          type="text"
+          id="invoiceNumber"
+          name="invoiceNumber"
+          onChange={handleChange}
+          value={formData.invoiceNumber || ''}
+          className="block w-full rounded-md border-gray-300 shadow-sm focus:ring-blue-500 focus:border-blue-500"
+        />
+      </div>
 
 
       {/* Items */}
